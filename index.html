@@ -6,11 +6,137 @@
 	  <link rel="stylesheet" href="style.css" />
    </head>   
 	<body>
-		<h1> Document start </h1>
-		  <script>
-		  alert("My name is Sergey");
-		  </script>
-		  <script src=myjs.js> </script>
+		<h2> Document start </h2>
+		<h3> //Task #1 </h3>
+			<p><b>Задание №1. Подключение JavaScript</b><br />
+				Напишите код внутри HTML-документа, который выводит на экран ваше имя с помощью alert.
+			</p>
+			<script>
+				alert("My name is Sergey");
+			</script>
+		<h3> //Task #2 </h3>
+			<p><b>Задание №2. Подключение JavaScript</b><br />
+				Напишите код во внешнем файле, который выводит на экран ваше имя с помощью alert. Подключите созданный файл к HTML-документу.
+			</p>			
+		  <script src="myjs.js"> </script>
+		  
+		  <h3> // Task #3 </h3>
+			<p><b>Задание №3. </b><br />
+					1. Объявите переменную;<br />
+					2. Запишите в переменную любое значение;<br />
+					3. Выведете на экран содержимое переменной;<br />
+					4. Измените значение переменной;<br />
+					5. Выведете на экран новое значение переменной.<br />
+			</p>
+			<script>
+					var variabl1;
+					variabl1 = "Variable Any value";
+					alert(variabl1);
+					variabl1 = "New value!";
+					alert("New value of this variable: "+variabl1);
+			</script>
+
+		   <h3> // Task #4 </h3>
+		   <p><b>Задание №4. Переменные</b><br />
+					1. Объявите две переменные;<br />
+					2. Запишите в переменные любые значения;<br />
+					3. Выведете на экран значения переменных;<br />
+					4. Скопируйте значение одной переменной в другую;<br />
+					5. Выведете на экран значения переменных.<br />
+			</p>
+			<script>
+				var a1 = "5";
+				var a2 = "10";
+				alert ("Original Values " + a1 +" "+ a2);
+				a2 = a1;
+				alert ("Changed values " + a1+ " " + a2);
+			</script>
+
+		  <h3> // Task #5 </h3>
+		    <p><b>Задание №5. Переменные</b><br />
+					1. Объявите константу;<br />
+					2. Выведете на экран значение константы.<br />
+			</p>
+			<script>
+				var CONST1 = "RRRR";
+				alert("This is constanta: "+CONST1);
+			</script>
+
+		  <h3> // Task #6 </h3>
+		  <p><b>Задание №6. Типы данных. Массивы c числовыми индексами</b><br />
+				1. Создайте пустой массив;<br />
+				2. В первый элемент массива запишите любое число;<br />
+				3. Во второй элемент массива запишите любую строку;<br />
+				4. В третий элемент массива запишите любое логическое (булево) значение;<br />
+				5. В четвертый элемент массива запишите значение null;<br />
+				6. Выведете на экран число элементов, которое хранится в массиве;<br />
+				7. Выведете на экран весь массив целиком;<br />
+				8. Запросите у пользователя ввести любое значение и запишите это значение в пятый элемент массива;<br />
+				9. Выведете на экран пятый элемент массива.<br />
+			<script>
+				var arr1 = []; //# 1
+					// For Jedies :) # 2-5
+					arr1.unshift(1);
+					arr1.push("Random String");
+					arr1.push(true);
+					arr1.push(null);
+					
+				//Second variant arr1 = [1, "Random String", true, null]; //
+				alert("There are "+ arr1.length +" elements into the array"); //# 6
+
+				alert("Elements of array: "+(arr1)); //# 7
+
+				var fifthElement = prompt("Input any value"," ");//# 8
+				arr1.push(fifthElement);
+				//second variant
+				//arr1[4] = prompt("Input any value"," ");//# 8
+				
+				alert("The fifth element is "+arr1[4]);// # 9
+				
+				alert("Now this array looks so: "+(arr1));
+			</script>
+
+		  <h3> // Task #7 </h3> 
+			<p>Задание №7. Массивы c числовыми индексами<br />
+				1. Создайте массив с элементами "Джаз", "Блюз";<br />
+				2. Добавьте в конец значение "Рок-н-Ролл";<br />
+				3. Замените предпоследнее значение с конца на "Классика". Код замены предпоследнего значения должен работать для массивов любой длины;<br />
+				4. Удалите первое значение массива и выведите его на экран;<br />
+				5. Добавьте в начало значения "Рэп" и "Регги".</p>
+			<script>
+				var music_arr = ["Джаз", "Блюз"]; //#1
+				music_arr.push("Рок-н-Ролл"); // #2
+				alert("Original array consists of: "+music_arr);
+				
+				music_arr[music_arr.length-2]="Классика"; //#3
+				alert(music_arr);
+
+				alert("This element was deleted: "+music_arr.shift()); // #4
+				alert("This elements are left: "+music_arr);
+
+				alert("Now we're adding two elements to the array");// #5
+				music_arr.unshift("Регги");
+				music_arr.unshift("Рэп");
+				alert("Currently the array is looking like that: "+music_arr);
+			</script>
+
+		  <h3> // Task #8 </h3>
+		    <p><b>Задание №8. Взаимодействие с пользователем</b><br />		  
+				Создайте страницу, которая спрашивает имя пользователя с помощью prompt и выводит его на экран с помощью alert.
+			</p>
+			<script>
+				var yourName = prompt("What is your name?", "");
+				alert("Your name is " + yourName);
+			</script>
+
+		  <h3> // Task #9 </h3>
+		  <p><b>Задание №9. Взаимодействие с пользователем</b><br />
+				Создайте страницу, которая выводит пользователю вопрос с помощью confirm, на который нужно ответить "да" (OK) или "нет" (Отмена), после этого выводит ответ на экран с помощью alert.
+			</p>
+			<script>
+				var question = confirm("To be or not to be?");
+				alert(question);
+			</script>
 		<h2> Document end </h2>  
 	</body>
 </html>
